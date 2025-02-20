@@ -1,0 +1,27 @@
+.filterContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+  
+.filterButton {
+    background: none;
+    border: none;
+    padding: 8px 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #00ffff;
+}
+  
+.filterButton:hover, .filterButton.active {
+  color: #00FFFF; 
+}
+
+  

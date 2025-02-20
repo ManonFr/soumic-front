@@ -1,0 +1,831 @@
+{
+  "festival": "Couleur café",
+  "year": 2025,
+  "scenes": [
+    {
+      "id": "petite-maison",
+      "name": "La petite maison dans la prairie",
+      "location": {
+        "latitude": 48.754753,
+        "longitude": 2.232531
+      }
+    },
+    {
+      "id": "boombox",
+      "name": "Boombox",
+      "location": {
+        "latitude": 48.756578,
+        "longitude": 2.237059
+      }
+    },
+    {
+      "id": "labo",
+      "name": "Le labo",
+      "location": {
+        "latitude": 48.758215,
+        "longitude": 2.240905
+      }
+    },
+    {
+      "id": "last-arena",
+      "name": "The last arena",
+      "location": {
+        "latitude": 48.755439,
+        "longitude": 2.242305
+      }
+    },
+    {
+      "id": "balzaal",
+      "name": "De Balzaal",
+      "location": {
+        "latitude": 48.757363,
+        "longitude": 2.245728
+      }
+    }
+  ],
+  "artists": [
+    {
+      "name": "ISHA",
+      "genre": "Rap francophone",
+      "date": "2024-07-17",
+      "startTime": "15:30",
+      "endTime": "16:30",
+      "stage": "petite-maison",
+      "timestamp": 1721223000000
+    },
+    {
+      "name": "Billx",
+      "genre": "Rave music",
+      "date": "2024-07-17",
+      "startTime": "15:30",
+      "endTime": "16:30",
+      "stage": "boombox",
+      "timestamp": 1721223000000
+    },
+    {
+      "name": "Femi Kuti & The Positive Force",
+      "genre": "Afrobeat",
+      "date": "2024-07-17",
+      "startTime": "16:00",
+      "endTime": "17:30",
+      "stage": "labo",
+      "timestamp": 1721224800000
+    },
+    {
+      "name": "Green Montana",
+      "genre": "Rap francophone",
+      "date": "2024-07-17",
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "stage": "last-arena",
+      "timestamp": 1721224800000
+    },
+    {
+      "name": "Hyperdub 20 years: Kode9 Feat. Flowdan, Loraine James, Tim Reaper",
+      "genre": "Bass music",
+      "date": "2024-07-17",
+      "startTime": "16:30",
+      "endTime": "18:00",
+      "stage": "balzaal",
+      "timestamp": 1721226600000
+    },
+    {
+      "name": "I Hate Models",
+      "genre": "Techno",
+      "date": "2024-07-17",
+      "startTime": "17:00",
+      "endTime": "18:00",
+      "stage": "petite-maison",
+      "timestamp": 1721228400000
+    },
+    {
+      "name": "L'Entourloop",
+      "genre": "Reggae",
+      "date": "2024-07-17",
+      "startTime": "17:00",
+      "endTime": "18:00",
+      "stage": "boombox",
+      "timestamp": 1721228400000
+    },
+    {
+      "name": "Oguz",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-17",
+      "startTime": "17:30",
+      "endTime": "19:00",
+      "stage": "labo",
+      "timestamp": 1721230200000
+    },
+    {
+      "name": "S.Pri Noir",
+      "genre": "Rap francophone",
+      "date": "2024-07-17",
+      "startTime": "17:30",
+      "endTime": "18:30",
+      "stage": "last-arena",
+      "timestamp": 1721230200000
+    },
+    {
+      "name": "Baby's Berserk",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-17",
+      "startTime": "18:00",
+      "endTime": "19:30",
+      "stage": "balzaal",
+      "timestamp": 1721232000000
+    },
+    {
+      "name": "Bae Blade",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-17",
+      "startTime": "18:30",
+      "endTime": "19:30",
+      "stage": "petite-maison",
+      "timestamp": 1721233800000
+    },
+    {
+      "name": "Cassie Raptor",
+      "genre": "Techno",
+      "date": "2024-07-17",
+      "startTime": "18:30",
+      "endTime": "19:30",
+      "stage": "boombox",
+      "timestamp": 1721233800000
+    },
+    {
+      "name": "Céline Gillain",
+      "genre": "Musique alternative",
+      "date": "2024-07-17",
+      "startTime": "19:00",
+      "endTime": "20:30",
+      "stage": "labo",
+      "timestamp": 1721235600000
+    },
+    {
+      "name": "Funk Tribu",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-17",
+      "startTime": "19:30",
+      "endTime": "20:30",
+      "stage": "last-arena",
+      "timestamp": 1721237400000
+    },
+    {
+      "name": "Jersey",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-17",
+      "startTime": "19:30",
+      "endTime": "21:00",
+      "stage": "balzaal",
+      "timestamp": 1721237400000
+    },
+    {
+      "name": "Novah",
+      "genre": "Techno",
+      "date": "2024-07-17",
+      "startTime": "20:30",
+      "endTime": "21:30",
+      "stage": "petite-maison",
+      "timestamp": 1721241000000
+    },
+    {
+      "name": "Odymel",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-17",
+      "startTime": "20:30",
+      "endTime": "21:30",
+      "stage": "boombox",
+      "timestamp": 1721241000000
+    },
+    {
+      "name": "Rakoon",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-17",
+      "startTime": "20:30",
+      "endTime": "22:30",
+      "stage": "labo",
+      "timestamp": 1721241000000
+    },
+    {
+      "name": "Vicky R",
+      "genre": "Rap francophone",
+      "date": "2024-07-17",
+      "startTime": "21:30",
+      "endTime": "22:30",
+      "stage": "last-arena",
+      "timestamp": 1721244600000
+    },
+    {
+      "name": "Dinos",
+      "genre": "Rap francophone",
+      "date": "2024-07-17",
+      "startTime": "21:00",
+      "endTime": "23:00",
+      "stage": "balzaal",
+      "timestamp": 1721242800000
+    },
+    {
+      "name": "Ganja White Night",
+      "genre": "Dubstep",
+      "date": "2024-07-17",
+      "startTime": "22:30",
+      "endTime": "23:30",
+      "stage": "petite-maison",
+      "timestamp": 1721248200000
+    },
+    {
+      "name": "Ice Spice",
+      "genre": "Rap US",
+      "date": "2024-07-17",
+      "startTime": "22:30",
+      "endTime": "23:30",
+      "stage": "boombox",
+      "timestamp": 1721248200000
+    },
+    {
+      "name": "James Blake",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-17",
+      "startTime": "22:30",
+      "endTime": "00:00",
+      "stage": "labo",
+      "timestamp": 1721248200000
+    },
+    {
+      "name": "Luidji",
+      "genre": "Rap francophone",
+      "date": "2024-07-17",
+      "startTime": "23:30",
+      "endTime": "00:30",
+      "stage": "last-arena",
+      "timestamp": 1721251800000
+    },
+    {
+      "name": "Netsky",
+      "genre": "Drum & Bass",
+      "date": "2024-07-17",
+      "startTime": "23:00",
+      "endTime": "00:30",
+      "stage": "balzaal",
+      "timestamp": 1721250000000
+    },
+    {
+      "name": "Subtronics",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-17",
+      "startTime": "00:30",
+      "endTime": "02:00",
+      "stage": "petite-maison",
+      "timestamp": 1721169000000
+    },
+    {
+      "name": "Altin Gün",
+      "genre": "Folk psychédélique",
+      "date": "2024-07-17",
+      "startTime": "00:30",
+      "endTime": "02:00",
+      "stage": "boombox",
+      "timestamp": 1721169000000
+    },
+    {
+      "name": "Amnesia Scanner",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-17",
+      "startTime": "00:00",
+      "endTime": "02:00",
+      "stage": "labo",
+      "timestamp": 1721167200000
+    },
+    {
+      "name": "Bou",
+      "genre": "Drum & Bass",
+      "date": "2024-07-17",
+      "startTime": "00:30",
+      "endTime": "02:30",
+      "stage": "balzaal",
+      "timestamp": 1721169000000
+    },
+    {
+      "name": "Caballero & JeanJass",
+      "genre": "Rap francophone",
+      "date": "2024-07-18",
+      "startTime": "15:30",
+      "endTime": "16:30",
+      "stage": "petite-maison",
+      "timestamp": 1721309400000
+    },
+    {
+      "name": "Creeds",
+      "genre": "Rave music",
+      "date": "2024-07-18",
+      "startTime": "15:30",
+      "endTime": "16:30",
+      "stage": "boombox",
+      "timestamp": 1721309400000
+    },
+    {
+      "name": "Jayda G",
+      "genre": "House",
+      "date": "2024-07-18",
+      "startTime": "16:00",
+      "endTime": "17:30",
+      "stage": "labo",
+      "timestamp": 1721311200000
+    },
+    {
+      "name": "Jyoty",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-18",
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "stage": "last-arena",
+      "timestamp": 1721311200000
+    },
+    {
+      "name": "Kenya Grace",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-18",
+      "startTime": "16:30",
+      "endTime": "18:00",
+      "stage": "balzaal",
+      "timestamp": 1721313000000
+    },
+    {
+      "name": "Koven",
+      "genre": "Drum & Bass",
+      "date": "2024-07-18",
+      "startTime": "17:00",
+      "endTime": "18:00",
+      "stage": "petite-maison",
+      "timestamp": 1721314800000
+    },
+    {
+      "name": "Naâman",
+      "genre": "Reggae",
+      "date": "2024-07-18",
+      "startTime": "17:00",
+      "endTime": "18:00",
+      "stage": "boombox",
+      "timestamp": 1721314800000
+    },
+    {
+      "name": "Osirius Jack",
+      "genre": "Rap francophone",
+      "date": "2024-07-18",
+      "startTime": "17:30",
+      "endTime": "19:00",
+      "stage": "labo",
+      "timestamp": 1721316600000
+    },
+    {
+      "name": "Sega Bodega",
+      "genre": "UK Bass",
+      "date": "2024-07-18",
+      "startTime": "17:30",
+      "endTime": "18:30",
+      "stage": "last-arena",
+      "timestamp": 1721316600000
+    },
+    {
+      "name": "Shame",
+      "genre": "Rock alternatif",
+      "date": "2024-07-18",
+      "startTime": "18:00",
+      "endTime": "19:30",
+      "stage": "balzaal",
+      "timestamp": 1721318400000
+    },
+    {
+      "name": "TiaCorine",
+      "genre": "Rap US",
+      "date": "2024-07-18",
+      "startTime": "18:30",
+      "endTime": "19:30",
+      "stage": "petite-maison",
+      "timestamp": 1721320200000
+    },
+    {
+      "name": "Amelie Lens",
+      "genre": "Rave music",
+      "date": "2024-07-18",
+      "startTime": "18:30",
+      "endTime": "19:30",
+      "stage": "boombox",
+      "timestamp": 1721320200000
+    },
+    {
+      "name": "Chase & Status",
+      "genre": "Drum & Bass",
+      "date": "2024-07-18",
+      "startTime": "19:00",
+      "endTime": "20:30",
+      "stage": "labo",
+      "timestamp": 1721322000000
+    },
+    {
+      "name": "Ezra Collective",
+      "genre": "Jazz",
+      "date": "2024-07-18",
+      "startTime": "19:30",
+      "endTime": "20:30",
+      "stage": "last-arena",
+      "timestamp": 1721323800000
+    },
+    {
+      "name": "Josman",
+      "genre": "Rap francophone",
+      "date": "2024-07-18",
+      "startTime": "19:30",
+      "endTime": "21:00",
+      "stage": "balzaal",
+      "timestamp": 1721323800000
+    },
+    {
+      "name": "Kaaris",
+      "genre": "Rap francophone",
+      "date": "2024-07-18",
+      "startTime": "20:30",
+      "endTime": "21:30",
+      "stage": "petite-maison",
+      "timestamp": 1721327400000
+    },
+    {
+      "name": "Skepta",
+      "genre": "Grime music",
+      "date": "2024-07-18",
+      "startTime": "20:30",
+      "endTime": "21:30",
+      "stage": "boombox",
+      "timestamp": 1721327400000
+    },
+    {
+      "name": "999999999",
+      "genre": "Techno",
+      "date": "2024-07-18",
+      "startTime": "20:30",
+      "endTime": "22:30",
+      "stage": "labo",
+      "timestamp": 1721327400000
+    },
+    {
+      "name": "Charlotte Adigéry & Bolis Pupul",
+      "genre": "Pop indépendante",
+      "date": "2024-07-18",
+      "startTime": "21:30",
+      "endTime": "22:30",
+      "stage": "last-arena",
+      "timestamp": 1721331000000
+    },
+    {
+      "name": "Farrago",
+      "genre": "Techno",
+      "date": "2024-07-18",
+      "startTime": "21:00",
+      "endTime": "23:00",
+      "stage": "balzaal",
+      "timestamp": 1721329200000
+    },
+    {
+      "name": "Irène Drésel",
+      "genre": "Techno",
+      "date": "2024-07-18",
+      "startTime": "22:30",
+      "endTime": "23:30",
+      "stage": "petite-maison",
+      "timestamp": 1721334600000
+    },
+    {
+      "name": "Kekra",
+      "genre": "Rap francophone",
+      "date": "2024-07-18",
+      "startTime": "22:30",
+      "endTime": "23:30",
+      "stage": "boombox",
+      "timestamp": 1721334600000
+    },
+    {
+      "name": "LSDXOXO",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-18",
+      "startTime": "22:30",
+      "endTime": "00:00",
+      "stage": "labo",
+      "timestamp": 1721334600000
+    },
+    {
+      "name": "Mezerg",
+      "genre": "Techno",
+      "date": "2024-07-18",
+      "startTime": "23:30",
+      "endTime": "00:30",
+      "stage": "last-arena",
+      "timestamp": 1721338200000
+    },
+    {
+      "name": "Aminé",
+      "genre": "Rap US",
+      "date": "2024-07-18",
+      "startTime": "23:00",
+      "endTime": "00:30",
+      "stage": "balzaal",
+      "timestamp": 1721336400000
+    },
+    {
+      "name": "Bicep",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-18",
+      "startTime": "00:30",
+      "endTime": "02:00",
+      "stage": "petite-maison",
+      "timestamp": 1721255400000
+    },
+    {
+      "name": "The Blessed Madonna",
+      "genre": "Techno",
+      "date": "2024-07-18",
+      "startTime": "00:30",
+      "endTime": "02:00",
+      "stage": "boombox",
+      "timestamp": 1721255400000
+    },
+    {
+      "name": "Gazo x Sofiane Pamart",
+      "genre": "Rap francophone",
+      "date": "2024-07-18",
+      "startTime": "00:00",
+      "endTime": "02:00",
+      "stage": "labo",
+      "timestamp": 1721253600000
+    },
+    {
+      "name": "Apashe & Brass Orchestra",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-18",
+      "startTime": "00:30",
+      "endTime": "02:30",
+      "stage": "balzaal",
+      "timestamp": 1721255400000
+    },
+    {
+      "name": "Baxter Dury",
+      "genre": "Rock alternatif",
+      "date": "2024-07-19",
+      "startTime": "15:30",
+      "endTime": "16:30",
+      "stage": "petite-maison",
+      "timestamp": 1721395800000
+    },
+    {
+      "name": "HAAi",
+      "genre": "Techno",
+      "date": "2024-07-19",
+      "startTime": "15:30",
+      "endTime": "16:30",
+      "stage": "boombox",
+      "timestamp": 1721395800000
+    },
+    {
+      "name": "Luther",
+      "genre": "Rap francophone",
+      "date": "2024-07-19",
+      "startTime": "16:00",
+      "endTime": "17:30",
+      "stage": "labo",
+      "timestamp": 1721397600000
+    },
+    {
+      "name": "Protoje",
+      "genre": "Reggae",
+      "date": "2024-07-19",
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "stage": "last-arena",
+      "timestamp": 1721397600000
+    },
+    {
+      "name": "Puggy",
+      "genre": "Rock",
+      "date": "2024-07-19",
+      "startTime": "16:30",
+      "endTime": "18:00",
+      "stage": "balzaal",
+      "timestamp": 1721399400000
+    },
+    {
+      "name": "Queen Omega & The Royal Souls",
+      "genre": "Reggae",
+      "date": "2024-07-19",
+      "startTime": "17:00",
+      "endTime": "18:00",
+      "stage": "petite-maison",
+      "timestamp": 1721401200000
+    },
+    {
+      "name": "Arca",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-19",
+      "startTime": "17:00",
+      "endTime": "18:00",
+      "stage": "boombox",
+      "timestamp": 1721401200000
+    },
+    {
+      "name": "Four Tet",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-19",
+      "startTime": "17:30",
+      "endTime": "19:00",
+      "stage": "labo",
+      "timestamp": 1721403000000
+    },
+    {
+      "name": "Honey Dijon",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-19",
+      "startTime": "17:30",
+      "endTime": "18:30",
+      "stage": "last-arena",
+      "timestamp": 1721403000000
+    },
+    {
+      "name": "Justice",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-19",
+      "startTime": "18:00",
+      "endTime": "19:30",
+      "stage": "balzaal",
+      "timestamp": 1721404800000
+    },
+    {
+      "name": "The Libertines",
+      "genre": "Garage Rock",
+      "date": "2024-07-19",
+      "startTime": "18:30",
+      "endTime": "19:30",
+      "stage": "petite-maison",
+      "timestamp": 1721406600000
+    },
+    {
+      "name": "Mochakk",
+      "genre": "House",
+      "date": "2024-07-19",
+      "startTime": "18:30",
+      "endTime": "19:30",
+      "stage": "boombox",
+      "timestamp": 1721406600000
+    },
+    {
+      "name": "Omah Lay",
+      "genre": "Afrobeat",
+      "date": "2024-07-19",
+      "startTime": "19:00",
+      "endTime": "20:30",
+      "stage": "labo",
+      "timestamp": 1721408400000
+    },
+    {
+      "name": "SCH",
+      "genre": "Rap francophone",
+      "date": "2024-07-19",
+      "startTime": "19:30",
+      "endTime": "20:30",
+      "stage": "last-arena",
+      "timestamp": 1721410200000
+    },
+    {
+      "name": "Rema",
+      "genre": "Afrobeat",
+      "date": "2024-07-19",
+      "startTime": "19:30",
+      "endTime": "21:00",
+      "stage": "balzaal",
+      "timestamp": 1721410200000
+    },
+    {
+      "name": "SadBoi",
+      "genre": "Reggae",
+      "date": "2024-07-19",
+      "startTime": "20:30",
+      "endTime": "21:30",
+      "stage": "petite-maison",
+      "timestamp": 1721413800000
+    },
+    {
+      "name": "Lazza Gio",
+      "genre": "Pop française",
+      "date": "2024-07-19",
+      "startTime": "20:30",
+      "endTime": "21:30",
+      "stage": "boombox",
+      "timestamp": 1721413800000
+    },
+    {
+      "name": "Sadandsolo",
+      "genre": "Rap francophone",
+      "date": "2024-07-19",
+      "startTime": "20:30",
+      "endTime": "22:30",
+      "stage": "labo",
+      "timestamp": 1721413800000
+    },
+    {
+      "name": "Fais le beau",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-19",
+      "startTime": "21:30",
+      "endTime": "22:30",
+      "stage": "last-arena",
+      "timestamp": 1721417400000
+    },
+    {
+      "name": "Belaria b2b DC Salas",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-19",
+      "startTime": "21:00",
+      "endTime": "23:00",
+      "stage": "balzaal",
+      "timestamp": 1721415600000
+    },
+    {
+      "name": "Reinel Bakole",
+      "genre": "Soul",
+      "date": "2024-07-19",
+      "startTime": "22:30",
+      "endTime": "23:30",
+      "stage": "petite-maison",
+      "timestamp": 1721421000000
+    },
+    {
+      "name": "Remzcore",
+      "genre": "Frenchcore",
+      "date": "2024-07-19",
+      "startTime": "22:30",
+      "endTime": "23:30",
+      "stage": "boombox",
+      "timestamp": 1721421000000
+    },
+    {
+      "name": "Zonmai",
+      "genre": "Hip-Hop",
+      "date": "2024-07-19",
+      "startTime": "22:30",
+      "endTime": "00:00",
+      "stage": "labo",
+      "timestamp": 1721421000000
+    },
+    {
+      "name": "Zaho de Sagazan",
+      "genre": "French Indie",
+      "date": "2024-07-19",
+      "startTime": "23:30",
+      "endTime": "00:30",
+      "stage": "last-arena",
+      "timestamp": 1721424600000
+    },
+    {
+      "name": "Sick of it all",
+      "genre": "Punk Rock",
+      "date": "2024-07-19",
+      "startTime": "23:00",
+      "endTime": "00:30",
+      "stage": "balzaal",
+      "timestamp": 1721422800000
+    },
+    {
+      "name": "ABSOLEM",
+      "genre": "Musiques électroniques",
+      "date": "2024-07-19",
+      "startTime": "00:30",
+      "endTime": "02:00",
+      "stage": "petite-maison",
+      "timestamp": 1721341800000
+    },
+    {
+      "name": "Angie & Lazuli",
+      "genre": "Rap francophone",
+      "date": "2024-07-19",
+      "startTime": "00:30",
+      "endTime": "02:00",
+      "stage": "boombox",
+      "timestamp": 1721341800000
+    },
+    {
+      "name": "The Cavemen.",
+      "genre": "Afrobeat",
+      "date": "2024-07-19",
+      "startTime": "00:00",
+      "endTime": "02:00",
+      "stage": "labo",
+      "timestamp": 1721340000000
+    },
+    {
+      "name": "KLAKMATRAK",
+      "genre": "Techno",
+      "date": "2024-07-19",
+      "startTime": "00:30",
+      "endTime": "02:30",
+      "stage": "balzaal",
+      "timestamp": 1721341800000
+    }
+  ]
+}

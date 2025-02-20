@@ -1,0 +1,81 @@
+.timelineWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.daySection {
+  background: rgba(10, 0, 30, 0.9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  width: 100%;
+}
+
+.dayTitle {
+  font-size: 1.8rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 0.5rem;
+}
+
+.timeScale {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 5px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 0.8rem; 
+  font-weight: bold;
+  opacity: 0.7; 
+}
+
+.timeMark {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.timeMark::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 1px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media screen and (max-width: 1023px) {
+  .timeScale {
+    display: none;
+  }
+}
+

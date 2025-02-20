@@ -1,0 +1,52 @@
+.tickerWrapper {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    background: black;
+    white-space: nowrap;
+    padding: 10px 0;
+    border-top: 2px solid #ff007f;
+    border-bottom: 2px solid #ff007f;
+}
+
+.ticker {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.tickerContent {
+    display: flex;
+    animation: tickerMove 80s linear infinite;
+}
+
+.tickerItem {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px;
+    flex-shrink: 0;
+    animation: fadeEffect 1s ease-in-out;
+}
+
+/* Animation du défilement */
+@keyframes tickerMove {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Effet d'opacité au changement */
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

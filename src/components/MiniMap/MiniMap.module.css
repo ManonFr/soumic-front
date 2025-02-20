@@ -1,0 +1,26 @@
+/* Conteneur général de la mini map */
+.mapContainer {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px; /* Limite la largeur pour ne pas prendre tout l'écran */
+    height: 250px; /* Hauteur plus compacte */
+    border-radius: 10px; /* Bords arrondis pour un effet moderne */
+    overflow: hidden; /* Évite que la carte dépasse */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre légère pour du relief */
+  }
+  
+  /* Appliquer le style directement à la carte */
+  .miniMap {
+    width: 100% !important;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  @media screen and (max-width: 600px) {
+    .miniMap {
+      height: 300px;
+    }
+  }
+  

@@ -1,0 +1,120 @@
+.stageRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.stageTitle {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.timelineTrack {
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 100%;
+  min-height: 50px;
+  height: auto;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.eventBlock {
+  background: #ff007F;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 5px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+  align-items: center;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.emptyStage {
+  text-align: center;
+  font-size: 1rem;
+  color: rgba(255, 0, 127, 0.7);
+  padding: 10px 0;
+}
+
+.timelineList {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.eventItem {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 0, 127, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.eventTime {
+  font-size: 0.9rem;
+  font-weight: normal;
+  opacity: 0.8;
+}
+
+.eventName {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .timelineTrack {
+    display: none;
+  }
+
+  .timelineList {
+    display: flex;
+  }
+
+  .stageRow {
+    padding: 0.5rem;
+  }
+
+  .eventItem {
+    padding: 8px;
+  }
+
+  .eventName {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .timelineTrack {
+    display: none;
+  }
+
+  .timelineList {
+    display: flex;
+  }
+
+  .eventItem {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+

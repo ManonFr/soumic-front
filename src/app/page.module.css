@@ -1,0 +1,135 @@
+.heroBanner {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 150px);
+  background: url("/images/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.ticketButton button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #ff007f;
+  color: #fff;
+  text-shadow: 0 0 10px #fff;
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  animation: neonPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.5), 0 0 20px rgba(255, 0, 127, 0.3);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.8), 0 0 40px rgba(255, 0, 127, 0.6);
+    transform: translateY(-2px) scale(1.08);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.5), 0 0 20px rgba(255, 0, 127, 0.3);
+    transform: translateY(0) scale(1);
+  }    
+}
+
+
+
+.ticketButton button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px (rgba(255, 0, 127, 1));
+}
+
+.heroContent h1 {
+  color: #ff007f;
+  font-size: 5rem;
+}
+
+.festivalDates {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  color: #000000;
+  opacity: 0.8;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #ff007f;
+}
+
+.pageContent {
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: #ff007f;
+  text-shadow: 0 0 10px #ff007f;
+  margin: 30px 0;
+}
+
+.miniMap {
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+
+  .heroBanner {
+    height: calc(100vh - 70px);
+
+  }
+  .festivalDates {
+    font-size: 1.3rem;
+  }
+
+  .ticketButton button {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .heroBanner{
+    height: calc(100vh - 100px);
+  }
+
+  .ticketButton button {
+    bottom: 40px;
+    right: 40px;
+  }
+}
+
+@media screen and (max-width: 1023px) {  
+  .ticketButton {
+    position: absolute;
+    top: 10%;  /* Place le bouton au-dessus du h1 */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+  }
+
+  .ticketButton button {
+    bottom: auto;
+    right: auto;
+  }
+}

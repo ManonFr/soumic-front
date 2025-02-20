@@ -1,0 +1,30 @@
+.interactiveMap {
+    text-align: center;
+    color: #00ffff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.interactiveMap h1 {
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.interactiveMap p {
+    opacity: 1;
+    margin-top: 10px;
+    font-size: 0.5rem;
+    text-align: right;
+    align-self: flex-end;
+}
+
+.interactiveMap a {
+    color: #ff007f;
+    text-decoration: none;
+}
+
+.interactiveMap a:hover {
+    text-shadow: 0 0 10px #ff007f;
+}

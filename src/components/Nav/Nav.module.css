@@ -1,0 +1,18 @@
+:root {
+    --burger-height: 20px;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        justify-content: flex-end;
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+}

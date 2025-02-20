@@ -1,0 +1,57 @@
+.customMarkerIcon {
+    filter: drop-shadow(0 0 10px rgba(255, 0, 255, 0.8)); /* Glow rose */
+    transition: transform 0.2s ease-in-out;
+}
+
+.customMarkerIcon:hover {
+    transform: scale(1.1); /* Effet zoom au survol */
+    filter: drop-shadow(0 0 15px rgba(255, 0, 255, 1)); /* Glow plus fort */
+}  
+
+.leaflet-popup-content-wrapper {
+    background: rgba(10, 10, 30, 0.95); /* Fond sombre et transparent */
+    color: #00ffff; /* Texte en cyan */
+    font-family: "Orbitron", sans-serif; /* Police futuriste */
+    border-radius: 8px;
+    border: 2px solid rgba(0, 255, 255, 0.5) !important;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Effet néon */
+    padding: 10px;
+    text-align: center;
+} 
+
+.leaflet-popup {
+    background: rgba(10, 10, 30, 0.95) !important;
+    border-radius: 8px !important;
+    border: 2px solid rgba(0, 255, 255, 0.5) !important;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8) !important;
+    text-align: center !important;
+  }
+  
+  /* 🌟 Cibler la div interne qui contient le contenu */
+  .leaflet-popup-content {
+    color: #00ffff !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    padding: 10px !important;
+  }
+  
+
+.popupContent {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.popupLink {
+    color: #ff007F;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.popupLink:hover {
+    text-shadow: 0 0 10px #ff007F;
+}
+
+.leaflet-popup-tip {
+    background: rgba(0, 255, 255, 0.8);
+}

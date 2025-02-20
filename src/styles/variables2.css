@@ -1,0 +1,11 @@
+:root {
+    /* Fonts */
+    --font-heading-primary: var(--font-audiowide);
+    --font-heading-secondary: var(--font-exo2)
+    --font-body: var(--font-montserrat);
+    --font-other: var(--font-lato)
+
+    /*Couleurs*/
+    --neon-pink: #ff007f;
+    --neon-blue: #00ffff;
+}

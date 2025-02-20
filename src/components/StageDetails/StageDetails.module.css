@@ -1,0 +1,69 @@
+.stageContainer {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(10, 10, 30, 0.9);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: #ff007f;
+    margin-bottom: 15px;
+}
+
+.artistList {
+    list-style: none;
+    padding: 0;
+    width: 70%;
+    margin: auto;
+}
+
+.artistCard {
+    background: rgba(0, 255, 255, 0.1);
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.artistCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+.noArtist {
+    color: #ff007f;
+    font-size: 1.2rem;
+}
+
+.backLink {
+    display: inline-block;
+    margin-top: 20px;
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.backLink:hover {
+    background: rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 767) {
+    .stageContainer {
+      width: 90%;
+    }
+    
+    .artistList {
+        width: 100%;
+    }
+  }

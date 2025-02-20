@@ -1,0 +1,32 @@
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.label {
+    font-size: 1rem;
+    color: #00ffff;
+}
+
+.select {
+    background: rgba(0, 0, 30, 0.8);
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.select:hover {
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.select:focus {
+    outline: none;
+    box-shadow: 0 0 15px #00ffff;
+}
