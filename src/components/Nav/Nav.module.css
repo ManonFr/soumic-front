@@ -1,7 +1,3 @@
-:root {
-    --burger-height: 20px;
-}
-
 .nav {
     position: relative;
     display: flex;
