@@ -36,7 +36,7 @@ export default function MiniMap() {
     latitude: stage.location.latitude,
     longitude: stage.location.longitude,
     name: stage.name,
-    type: "stage",
+    type: "stages",
   }));
 
   return (
