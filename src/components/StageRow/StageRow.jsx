@@ -50,7 +50,9 @@ export default function StageRow({
             </div>
           ))
         ) : (
-          <p className={styles.emptyStage}>Pas encore d'artistes annoncés</p>
+          <p className={styles.emptyStage}>
+            Pas encore d&apos;artistes annoncés
+          </p>
         )}
       </div>
     </div>
