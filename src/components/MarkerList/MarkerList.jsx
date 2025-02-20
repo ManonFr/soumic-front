@@ -28,7 +28,7 @@ export default function MarkerList({ markers }) {
           className={styles.customMarkerIcon}
         >
           <Popup className={styles.popup} aria-live="assertive">
-            {marker.type === "stage" && (
+            {marker.type === "stages" && (
               <div className={styles.popupContent}>
                 <strong>{marker.name}</strong>
                 <br />

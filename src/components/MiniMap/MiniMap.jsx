@@ -36,7 +36,7 @@ export default function MiniMap() {
     latitude: stage.location.latitude,
     longitude: stage.location.longitude,
     name: stage.name,
-    type: "stages",
+    type: "stage",
   }));
 
   return (
@@ -59,7 +59,7 @@ export default function MiniMap() {
           <Marker
             key={marker.id}
             position={[marker.latitude, marker.longitude]}
-            icon={getCustomIcon(L, "stage")} // Icône personnalisée
+            icon={getCustomIcon(L, "stages")} // Icône personnalisée
             title={`Scène ${marker.name}`}
             aria-label={`Scène ${marker.name}, cliquez pour voir les artistes`}
           >
