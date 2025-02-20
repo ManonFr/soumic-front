@@ -36,6 +36,7 @@ export default function FilterButtons({ days, genres, onFilterChange }) {
         className={`${styles.filterButton} ${
           selectedFilters.day === "all" ? styles.active : ""
         }`}
+        aria-pressed={selectedFilters.day === "all"}
       >
         All
       </button>

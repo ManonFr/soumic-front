@@ -21,9 +21,9 @@ export default function Nav() {
   }, [isOpen]);
 
   return (
-    <nav className={styles.nav}>
+    <div className={styles.nav}>
       <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
       <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
-    </nav>
+    </div>
   );
 }

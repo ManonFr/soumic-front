@@ -3,12 +3,12 @@ import Link from "next/link";
 import styles from "./ArtistCard.module.css";
 import { formatDateToFullDate } from "@/utils/dateUtils";
 
-export default function ArtistCard({ artist, stageName }) {
+export default function ArtistCard({ artist }) {
   return (
     <div className={styles.eventCard}>
       <Image
         src={artist.photo}
-        alt={artist.name}
+        alt={`Photo de ${artist.name}`}
         fill
         sizes="(max-width: 767px) 50vw, (max-width: 1023px) 25vw, 20vw"
         className={styles.artistPhoto}

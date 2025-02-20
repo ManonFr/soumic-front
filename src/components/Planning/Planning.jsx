@@ -31,7 +31,6 @@ export default function Planning({ artists, stages }) {
 
   return (
     <div className={styles.contentWrapper}>
-      <h1>Line Up</h1>
       <FilterButtons
         days={uniqueDays}
         genres={uniqueGenres}
@@ -39,7 +38,7 @@ export default function Planning({ artists, stages }) {
           setFilters({ ...filters, ...newFilters })
         }
       />
-      <div className={styles.container}>
+      <div className={styles.container} aria-live="polite">
         {sortedArtists.length > 0 ? (
           sortedArtists.map((artist) => (
             <ArtistCard

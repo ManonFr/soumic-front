@@ -34,8 +34,6 @@ export default function TimelinePlanning({ artists, stages }) {
 
   return (
     <div className={styles.timelineWrapper}>
-      <h1 className={styles.title}>Programmation</h1>
-
       <FilterButtons
         days={uniqueDays}
         genres={uniqueGenres}
@@ -43,7 +41,7 @@ export default function TimelinePlanning({ artists, stages }) {
           setFilters({ ...filters, ...newFilters })
         }
       />
-      <div className={styles.timelineContainer}>
+      <div className={styles.timelineContainer} aria-live="polite">
         {Object.entries(concertsByDay).map(([date, concerts]) => {
           const MIN_START_HOUR = 15;
           const MAX_END_HOUR = 24;
@@ -54,7 +52,7 @@ export default function TimelinePlanning({ artists, stages }) {
           const totalHours = latestEndTime - earliestStartTime + 1;
 
           return (
-            <div key={date} className={styles.daySection}>
+            <section key={date} className={styles.daySection}>
               <h2 className={styles.dayTitle}>{formatDateToFullDate(date)}</h2>
 
               <div className={styles.timeScale}>
@@ -67,16 +65,19 @@ export default function TimelinePlanning({ artists, stages }) {
 
               <div className={styles.timeline}>
                 {stages.map((stage) => (
-                  <StageRow
-                    key={stage.id}
-                    stage={stage}
-                    concerts={concerts.filter((c) => c.stage === stage.id)}
-                    earliestStartTime={earliestStartTime}
-                    latestEndTime={latestEndTime}
-                  />
+                  <div key={stage.id} className={styles.stageBlock}>
+                    <h3 className={styles.stageTitle}>{stage.name}</h3>
+                    <StageRow
+                      key={stage.id}
+                      stage={stage}
+                      concerts={concerts.filter((c) => c.stage === stage.id)}
+                      earliestStartTime={earliestStartTime}
+                      latestEndTime={latestEndTime}
+                    />
+                  </div>
                 ))}
               </div>
-            </div>
+            </section>
           );
         })}
       </div>

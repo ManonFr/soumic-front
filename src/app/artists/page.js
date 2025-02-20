@@ -6,6 +6,7 @@ export default function LineUp() {
 
   return (
     <div>
+      <h1>Line Up</h1>
       <Planning artists={artists} stages={stages} />
     </div>
   );

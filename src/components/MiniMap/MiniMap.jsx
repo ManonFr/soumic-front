@@ -44,8 +44,10 @@ export default function MiniMap() {
       <MapContainer
         center={[48.754279, 2.242498]}
         zoom={15}
-        scrollWheelZoom={false} // Désactiver le zoom à la molette
+        scrollWheelZoom={true}
         className={styles.miniMap}
+        role="application"
+        aria-label="Carte du festival montrant l'emplacement des scènes"
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -58,11 +60,18 @@ export default function MiniMap() {
             key={marker.id}
             position={[marker.latitude, marker.longitude]}
             icon={getCustomIcon(L, "stage")} // Icône personnalisée
+            title={`Scène ${marker.name}`}
+            aria-label={`Scène ${marker.name}, cliquez pour voir les artistes`}
           >
             <Popup>
               <strong>{marker.name}</strong>
               <br />
-              <Link href={`/scenes/${marker.id}`}>Voir les artistes</Link>
+              <Link
+                href={`/scenes/${marker.id}`}
+                aria-label={`Voir les artistes de la scène ${marker.name}`}
+              >
+                Voir les artistes
+              </Link>
             </Popup>
           </Marker>
         ))}

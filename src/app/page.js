@@ -20,7 +20,10 @@ export default function Home() {
       <div className={styles.pageContent}>
         <div>
           <h2 className={styles.subtitle}>Plan du festival</h2>
-          <MiniMap className={styles.miniMap} />
+          <MiniMap
+            className={styles.miniMap}
+            aria-label="Carte miniature du festival avec les scènes affichées"
+          />
         </div>
       </div>
     </main>

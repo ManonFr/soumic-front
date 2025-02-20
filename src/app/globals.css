@@ -33,6 +33,7 @@ h1 {
   text-shadow: 0 0 10px #00ffff;
   text-align: center;
   margin-bottom: 1.5rem;
+  padding-top: 2rem;
 }
 
 h2, h3, h4, h5, h6 {
@@ -66,6 +67,10 @@ h2, h3, h4, h5, h6 {
 .leaflet-popup-tip {
   background: rgba(10, 10, 30, 0.95) !important;
   border: 2px solid rgba(0, 255, 255, 0.5) !important;
+}
+
+.leaflet-control-container {
+  z-index: 20 !important;
 }
 
 @media screen and (max-width: 767px) {

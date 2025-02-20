@@ -13,8 +13,6 @@ export default function StageRow({
 
   return (
     <div key={stage.id} className={styles.stageRow}>
-      <h3 className={styles.stageTitle}>{stage.name}</h3>
-
       <div className={styles.timelineTrack}>
         {concerts.length > 0 ? (
           concerts.map((concert) => {
@@ -28,7 +26,9 @@ export default function StageRow({
                 key={concert.name}
                 className={styles.eventBlock}
                 style={{ left: `${left}%`, width: `${width}%` }}
-                aria-label={`Concert de ${concert.name} de ${concert.startTime} à ${concert.endTime}`}
+                role="button"
+                tabIndex="0"
+                aria-label={`Concert de ${concert.name} sur la scène ${stage.name} de ${concert.startTime} à ${concert.endTime}`}
               >
                 {concert.name}
               </div>

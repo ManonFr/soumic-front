@@ -8,7 +8,7 @@ export default async function Map() {
     latitude: stages.location.latitude,
     longitude: stages.location.longitude,
     name: stages.name,
-    type: "stage",
+    type: "stages",
   }));
 
   const amenityMarkers = Object.entries(festivalData.amenities).flatMap(
@@ -28,8 +28,9 @@ export default async function Map() {
   const allMarkers = [...stageMarkers, ...amenityMarkers];
 
   return (
-    <div>
+    <main>
+      <h1>Carte interactive du festival</h1>
       <InteractiveMap markers={allMarkers} />
-    </div>
+    </main>
   );
 }

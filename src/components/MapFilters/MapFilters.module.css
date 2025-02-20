@@ -1,5 +1,6 @@
 .filters {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -9,6 +10,11 @@
 .label {
     font-size: 1rem;
     color: #00ffff;
+}
+
+.filterInfo {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .select {

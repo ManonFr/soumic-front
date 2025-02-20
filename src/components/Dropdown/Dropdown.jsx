@@ -26,7 +26,11 @@ export default function Dropdown({ options, selected, onSelect, label }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <button className={styles.dropdownButton}>
+      <button
+        className={styles.dropdownButton}
+        aria-expanded={isOpen}
+        aria-haspopup="listbox"
+      >
         {selected || label} <span className={styles.arrow}>▼</span>
       </button>
 
@@ -35,6 +39,8 @@ export default function Dropdown({ options, selected, onSelect, label }) {
           className={styles.dropdownList}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          aria-label={`Options pour ${label}`}
+          role="listbox"
         >
           {options
             .filter((option) => option.value !== "all")
@@ -42,6 +48,8 @@ export default function Dropdown({ options, selected, onSelect, label }) {
               <li
                 key={option.value}
                 className={styles.dropdownItem}
+                role="option"
+                tabIndex="0"
                 onClick={() => {
                   onSelect(option.value);
                   setIsOpen(false);

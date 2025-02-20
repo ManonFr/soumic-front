@@ -6,14 +6,6 @@
   padding: 2rem;
 }
 
-.title {
-  font-size: 2.5rem;
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
 .timelineContainer {
   display: flex;
   flex-direction: column;
@@ -71,6 +63,19 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.stageBlock {
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.stageTitle {
+  font-size: 1.4rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px #ff007f;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 1023px) {

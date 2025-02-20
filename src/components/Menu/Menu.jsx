@@ -6,7 +6,11 @@ export default function Menu({ isOpen, setIsOpen }) {
   const pathname = usePathname();
 
   return (
-    <nav className={`${styles.menu} ${isOpen ? styles.showMenu : ""}`}>
+    <nav
+      id="menu"
+      className={`${styles.menu} ${isOpen ? styles.showMenu : ""}`}
+      aria-label="Menu principal"
+    >
       <ul className={styles.list}>
         <li className={styles.listItem}>
           <Link

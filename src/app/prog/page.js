@@ -3,9 +3,13 @@ import festivalData from "@/data/festival.json";
 
 export default function Programme() {
   return (
-    <TimelinePlanning
-      artists={festivalData.artists}
-      stages={festivalData.stages}
-    />
+    <main>
+      <h1>Programmation</h1>
+
+      <TimelinePlanning
+        artists={festivalData.artists}
+        stages={festivalData.stages}
+      />
+    </main>
   );
 }

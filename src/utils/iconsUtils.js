@@ -2,7 +2,7 @@ export function getCustomIcon(L, type) {
   if (!L) return null;
   // Définir les chemins des icônes
   const icons = {
-    stage: "/stageIcon.png",
+    stages: "/stageIcon.png",
     food: "/foodIcon.png",
     drinks: "/drinksIcon.png",
     parkings: "/parkingIcon.png",

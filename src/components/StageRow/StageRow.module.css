@@ -5,13 +5,6 @@
   width: 100%;
 }
 
-.stageTitle {
-  font-size: 1.4rem;
-  color: #fff;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
 .timelineTrack {
   position: relative;
   background: rgba(0, 0, 0, 0.8);

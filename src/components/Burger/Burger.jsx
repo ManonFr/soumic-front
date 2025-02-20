@@ -9,7 +9,7 @@ export default function Burger({ isOpen, setIsOpen }) {
       <button
         className={`${styles.burgerIcon} ${isOpen ? styles.open : ""}`}
         onClick={toggleMenu}
-        aria-label="Ouvrir/fermer le menu"
+        aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
         aria-expanded={isOpen}
         aria-controls="menu"
       >
