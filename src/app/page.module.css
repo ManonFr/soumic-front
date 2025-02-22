@@ -1,6 +1,6 @@
 .heroBanner {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 150px);
   background: url("/images/hero.jpg") center/cover no-repeat;
   display: flex;

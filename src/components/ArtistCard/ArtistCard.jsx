@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./ArtistCard.module.css";
 import { formatDateToFullDate } from "@/utils/dateUtils";
 
@@ -16,15 +15,6 @@ export default function ArtistCard({ artist }) {
       <div className={styles.overlay}>
         <p className={styles.date}>{formatDateToFullDate(artist.date)}</p>
         <h3 className={styles.name}>{artist.name}</h3>
-        {/* <p>
-        <strong>Genre:</strong> {artist.genre}
-      </p> */}
-        {/* <p>
-        <strong>Heure:</strong> {artist.startTime}
-      </p>
-      <p>
-        <strong>Scène:</strong> {stageName || "Scène inconnue"}
-      </p> */}
       </div>
     </div>
   );
