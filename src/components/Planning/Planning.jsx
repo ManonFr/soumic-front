@@ -8,12 +8,12 @@ import { filterArtists } from "@/utils/filters";
 import { getUniqueDays, getUniqueGenres } from "@/utils/dataUtils";
 
 export default function Planning({ artists, stages }) {
-  //Etat des filtres sélectionnés
-  const [filters, setFilters] = useState({ day: "all", genre: "all" });
-
   // Jours et genres uniques
   const uniqueDays = getUniqueDays(artists);
   const uniqueGenres = getUniqueGenres(artists);
+
+  //Etat des filtres sélectionnés
+  const [filters, setFilters] = useState({ day: "all", genre: "all" });
 
   // Filtrer les artistes en fonction des filtres sélectionnés
   const filteredArtists = useMemo(

@@ -31,7 +31,7 @@ export default function Menu({ isOpen, setIsOpen }) {
             }`}
             onClick={() => setIsOpen(false)}
           >
-            Programme
+            Programmation
           </Link>
         </li>
         <li className={styles.listItem}>
