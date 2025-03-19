@@ -11,10 +11,10 @@ export default function FilterButtons({ days, genres, onFilterChange }) {
     genre: "all",
   });
 
-  // selectedFilters mis à jour quand les filtres changent dans TimelinePlanning
-  useEffect(() => {
-    setSelectedFilters({ day: "all", genre: "all" });
-  }, []);
+  // selectedFilters mis à jour quand les filtres changent
+  // useEffect(() => {
+  //   setSelectedFilters({ day: "all", genre: "all" });
+  // }, []);
 
   // Mettre à jour les filtres ET les afficher correctement
   const handleFilterChange = (newFilter) => {

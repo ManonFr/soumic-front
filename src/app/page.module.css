@@ -49,7 +49,7 @@
 
 .ticketButton button:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 30px (rgba(255, 0, 127, 1));
+  box-shadow: 0 0 30px rgba(255, 0, 127, 1);
 }
 
 .heroContent h1 {

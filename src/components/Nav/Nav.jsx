@@ -8,7 +8,7 @@ import Burger from "../Burger/Burger";
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Empêcher le scroll en arrière-plan quand le menu est ouvert
+  // Empêcher le scroll en arrière-plan quand le menu (mobile) est ouvert
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";

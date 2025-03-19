@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    background: black;
+    background: #000000;
     white-space: nowrap;
     padding: 10px 0;
     border-top: 2px solid #ff007f;
@@ -24,7 +24,7 @@
     font-size: 1.3rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     padding: 0 20px;
     flex-shrink: 0;

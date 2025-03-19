@@ -1,5 +1,7 @@
 export function getCustomIcon(L, type) {
+  //Vérifie si leaflet est bien chargé avant d'utiliser L.icon
   if (!L) return null;
+
   // Définir les chemins des icônes
   const icons = {
     stages: "/stageIcon.png",
@@ -11,6 +13,7 @@ export function getCustomIcon(L, type) {
     "rest area": "/restAreaIcon.png",
   };
 
+  // Création et retour d'une icône Leaflet personnalisée
   return new L.Icon({
     iconUrl: icons[type] || "/defaultIcon.png",
     iconSize: [25, 25],

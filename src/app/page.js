@@ -11,7 +11,11 @@ export default function Home() {
           <h1>Soumic 2025</h1>
           <p className={styles.festivalDates}>17-19 juillet 2025</p>
         </div>
-        <Link href="/tickets" className={styles.ticketButton}>
+        <Link
+          href="/tickets"
+          className={styles.ticketButton}
+          aria-label="Acheter un billet pour Soumic 2025"
+        >
           <button>Acheter un billet</button>
         </Link>
       </section>

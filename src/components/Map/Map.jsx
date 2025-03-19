@@ -5,6 +5,8 @@ import "leaflet/dist/leaflet.css";
 import MarkerList from "../MarkerList/MarkerList";
 import styles from "./Map.module.css";
 
+// Chargement dynamique des composants React-Leaflet
+// Next.js ne supporte pas Leaflet côté serveur, donc on le désactive avec ssr:false
 const MapContainer = dynamic(
   () => import("react-leaflet").then((mod) => mod.MapContainer),
   { ssr: false }

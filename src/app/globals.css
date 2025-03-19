@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  color: #FFF;
+  color: #ffffff;
 }
 
 body::before {
@@ -27,7 +27,7 @@ body::before {
 
 h1 {
   font-family: var(--font-audiowide), sans-serif;
-  color: #FFF;
+  color: #ffffff;
   font-size: 2.5rem;
   color: #00ffff;
   text-shadow: 0 0 10px #00ffff;
@@ -38,7 +38,7 @@ h1 {
 
 h2, h3, h4, h5, h6 {
   font-family: var(--font-exo2), sans-serif;
-  color: #FFF;
+  color: #ffffff;
 }
 
 .contentWrapper {

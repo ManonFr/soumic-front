@@ -20,7 +20,7 @@
 
 .eventBlock {
   background: #ff007F;
-  color: #fff;
+  color: #ffffff;
   padding: 0.5rem;
   border-radius: 20px;
   font-weight: bold;
@@ -55,7 +55,7 @@
   display: flex;
   flex-direction: column;
   background: rgba(255, 0, 127, 0.8);
-  color: #fff;
+  color: #ffffff;
   padding: 10px;
   border-radius: 8px;
   font-weight: bold;

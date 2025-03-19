@@ -1,7 +1,7 @@
 import InteractiveMap from "@/components/InteractiveMap/InteractiveMap";
 import festivalData from "@/data/festival.json";
 
-export default async function Map() {
+export default function Map() {
   // Transforme les données en un tableau de marqueurs
   const stageMarkers = festivalData.stages.map((stages) => ({
     id: stages.id,

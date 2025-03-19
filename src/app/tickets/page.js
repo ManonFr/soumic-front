@@ -1,12 +1,29 @@
-import styles from "./tickets.module.css";
+import Link from "next/link";
 
-export default function TicketPage({ params }) {
+export default function Ticket() {
   return (
-    <main className={styles.ticketWrapper}>
-      <h1>Ticket : {params.id}</h1>
-      <p className={styles.description}>
-        Vous avez sélectionné le billet {params.id} pour Soumic 2025.
-      </p>
-    </main>
+    <>
+      <Link href="/tickets/VIP" aria-label="Acheter un billet pour Soumic 2025">
+        <button>Acheter un billet VIP</button>
+      </Link>
+      <Link
+        href="/tickets/premium"
+        aria-label="Acheter un billet pour Soumic 2025"
+      >
+        <button>Acheter un billet Premium</button>
+      </Link>
+      <Link
+        href="/tickets/backstage"
+        aria-label="Acheter un billet pour Soumic 2025"
+      >
+        <button>Acheter un billet Backstage</button>
+      </Link>
+      <Link
+        href="/tickets/standard"
+        aria-label="Acheter un billet pour Soumic 2025"
+      >
+        <button>Acheter un billet Standard</button>
+      </Link>
+    </>
   );
 }

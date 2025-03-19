@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import "leaflet/dist/leaflet.css";
 import Link from "next/link";
-import festivalData from "@/data/festival.json"; // Import des données du festival
+import festivalData from "@/data/festival.json";
 import styles from "./MiniMap.module.css";
 import useLeaflet from "@/utils/useLeaflet";
 import { getCustomIcon } from "@/utils/iconsUtils";
@@ -11,7 +11,7 @@ import { getCustomIcon } from "@/utils/iconsUtils";
 // Pour contrer l'erreur 500
 const MapContainer = dynamic(
   () => import("react-leaflet").then((mod) => mod.MapContainer),
-  { ssr: false }
+  { ssr: false } // Next.js ne supporte pas Leaflet en SSR
 );
 const TileLayer = dynamic(
   () => import("react-leaflet").then((mod) => mod.TileLayer),
@@ -26,7 +26,7 @@ const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), {
 });
 
 export default function MiniMap() {
-  const L = useLeaflet();
+  const L = useLeaflet(); // Charger Leaflet uniquement côté client
 
   if (!L) return <p>Chargement de la carte...</p>;
 

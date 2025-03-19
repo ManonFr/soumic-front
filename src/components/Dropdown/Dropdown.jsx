@@ -5,11 +5,13 @@ import styles from "./Dropdown.module.css";
 
 export default function Dropdown({ options, selected, onSelect, label }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Gérer le délai avant fermeture
   const timeoutRef = useRef(null);
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
+      clearTimeout(timeoutRef.current); // Annule le délai de fermeture s'il existe
     }
     setIsOpen(true);
   };
@@ -50,6 +52,7 @@ export default function Dropdown({ options, selected, onSelect, label }) {
                 className={styles.dropdownItem}
                 role="option"
                 tabIndex="0"
+                aria-selected={selected === option.value}
                 onClick={() => {
                   onSelect(option.value);
                   setIsOpen(false);

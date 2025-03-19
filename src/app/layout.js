@@ -22,12 +22,6 @@ const audiowide = Audiowide({
   variable: "--font-audiowide",
 });
 
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["300", "400", "700"],
-  variable: "--font-lato",
-});
-
 export const metadata = {
   title: "SOUMIC Festival",
   description: "Première édition !",
@@ -37,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="fr"
-      className={`${montserrat.variable} ${exo2.variable} ${audiowide.variable} ${lato.variable}`}
+      className={`${montserrat.variable} ${exo2.variable} ${audiowide.variable}`}
     >
       <body>
         <Header />
