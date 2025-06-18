@@ -2,7 +2,7 @@
 
 import styles from "./StageDetails.module.css";
 import Link from "next/link";
-import { formatDateToFullDate } from "@/utils/dateUtils";
+import { formatDateToFullDate, formatTimeHHMM } from "@/utils/dateUtils";
 
 export default function StageDetails({ stage, artists }) {
   if (!stage) {
@@ -12,7 +12,6 @@ export default function StageDetails({ stage, artists }) {
       </p>
     );
   }
-
   return (
     <div className={styles.stageContainer}>
       <h1>{stage.name}</h1>
@@ -20,10 +19,15 @@ export default function StageDetails({ stage, artists }) {
       <ul className={styles.artistList} role="list" aria-live="polite">
         {artists.length > 0 ? (
           artists.map((artist) => (
-            <li key={artist.name} className={styles.artistCard} role="listitem">
-              <strong>{artist.name}</strong> <br />
-              {formatDateToFullDate(artist.date)}, {artist.startTime} -{" "}
-              {artist.endTime}
+            <li
+              key={artist.artist_id}
+              className={styles.artistCard}
+              role="listitem"
+            >
+              <strong>{artist.artist_name}</strong> <br />
+              {formatDateToFullDate(artist.date)},{" "}
+              {formatTimeHHMM(artist.start_time)} -{" "}
+              {formatTimeHHMM(artist.end_time)}
             </li>
           ))
         ) : (

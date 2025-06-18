@@ -3,12 +3,11 @@
 import dynamic from "next/dynamic";
 import "leaflet/dist/leaflet.css";
 import Link from "next/link";
-import festivalData from "@/data/festival.json";
 import styles from "./MiniMap.module.css";
 import useLeaflet from "@/utils/useLeaflet";
 import { getCustomIcon } from "@/utils/iconsUtils";
 
-// Pour contrer l'erreur 500
+// Pour contrer l'erreur 500 - Chargement dynamique des composants Leaflet
 const MapContainer = dynamic(
   () => import("react-leaflet").then((mod) => mod.MapContainer),
   { ssr: false } // Next.js ne supporte pas Leaflet en SSR
@@ -25,19 +24,10 @@ const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), {
   ssr: false,
 });
 
-export default function MiniMap() {
+export default function MiniMap({ markers }) {
   const L = useLeaflet(); // Charger Leaflet uniquement côté client
 
   if (!L) return <p>Chargement de la carte...</p>;
-
-  // Récupérer uniquement les scènes
-  const stageMarkers = festivalData.stages.map((stage) => ({
-    id: stage.id,
-    latitude: stage.location.latitude,
-    longitude: stage.location.longitude,
-    name: stage.name,
-    type: "stage",
-  }));
 
   return (
     <div className={styles.mapContainer}>
@@ -55,7 +45,7 @@ export default function MiniMap() {
         />
 
         {/* Ajouter uniquement les marqueurs des scènes */}
-        {stageMarkers.map((marker) => (
+        {markers.map((marker) => (
           <Marker
             key={marker.id}
             position={[marker.latitude, marker.longitude]}

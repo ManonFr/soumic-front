@@ -41,7 +41,10 @@ export default function InteractiveMap({ markers }) {
           {/* Affichage des lieux correspondants au filtre */}
           {filteredMarkers.length > 0 ? (
             filteredMarkers.map((marker) => (
-              <li key={marker.id} className={styles.venueItem}>
+              <li
+                key={`${marker.type}-${marker.id}`}
+                className={styles.venueItem}
+              >
                 <strong>{marker.name}</strong> ({translateType(marker.type)})
               </li>
             ))

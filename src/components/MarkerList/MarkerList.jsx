@@ -27,7 +27,7 @@ export default function MarkerList({ markers }) {
       {/* Parcours la liste des marqueurs et les affiche sur la carte */}
       {markers.map((marker) => (
         <Marker
-          key={marker.id} // Clé unique pour React
+          key={`${marker.type}-${marker.id}`} // Clé unique: type + id
           position={[marker.latitude, marker.longitude]}
           icon={getCustomIcon(L, marker.type)}
           className={styles.customMarkerIcon}

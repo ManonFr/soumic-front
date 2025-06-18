@@ -1,8 +1,9 @@
 import Planning from "@/components/Planning/Planning";
-import festivalData from "@/data/festival.json";
+import { fetchFestivalData } from "@/lib/fetchArtists";
+// import festivalData from "@/data/festival.json";
 
-export default function LineUp() {
-  const { artists, stages } = festivalData;
+export default async function LineUp() {
+  const { artists, stages } = await fetchFestivalData();
 
   return (
     <div>

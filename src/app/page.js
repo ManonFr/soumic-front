@@ -2,8 +2,11 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import TicketsLink from "@/components/TicketsLink/TicketsLink";
 import MiniMap from "@/components/MiniMap/MiniMap";
+import { fetchStagesOnly } from "@/lib/fetchStages";
 
-export default function Home() {
+export default async function Home() {
+  const stages = await fetchStagesOnly();
+
   return (
     <main>
       <section className={styles.heroBanner}>
@@ -25,6 +28,7 @@ export default function Home() {
         <div>
           <h2 className={styles.subtitle}>Plan du festival</h2>
           <MiniMap
+            markers={stages}
             className={styles.miniMap}
             aria-label="Carte miniature du festival avec les scènes affichées"
           />

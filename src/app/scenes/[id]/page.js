@@ -1,12 +1,17 @@
 import StageDetails from "@/components/StageDetails/StageDetails";
-import festivalData from "@/data/festival.json";
+import { fetchStage } from "@/lib/fetchStages";
+import { fetchArtistsByStage } from "@/lib/fetchArtists";
 
 export default async function StagePage({ params }) {
   const { id } = await params;
 
-  const pageStage = festivalData.stages.find((stage) => stage.id === id);
+  const stage = await fetchStage(id);
 
-  const artists = festivalData.artists.filter((artist) => artist.stage === id);
+  const artists = await fetchArtistsByStage(id);
 
-  return <StageDetails stage={pageStage} artists={artists} />;
+  if (!stage) {
+    return <p>Scène introuvable</p>;
+  }
+
+  return <StageDetails stage={stage} artists={artists} />;
 }
