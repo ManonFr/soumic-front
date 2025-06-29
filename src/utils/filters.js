@@ -1,27 +1,25 @@
-// Filtrer les artistes en fonction du filtre sélectionné (jour/genre)
 export function filterArtists(artists, filters) {
   return artists.filter((artist) => {
-    // Vérifie si l'artiste correspond au jour sélectionné ou si "all" est activé
+    // Check if the artist matched the selected day or if "all" is selected
     const isDayMatching = filters.day === "all" || artist.date === filters.day;
-    // Pareil mais avec le genre
+    // Same logic for the genre
     const isGenreMatching =
       filters.genre === "all" || artist.genre === filters.genre;
 
-    // Retourne 'true' uniquement si les deux conditions sont remplies
+    // Only return true if both conditions are met
     return isDayMatching && isGenreMatching;
   });
 }
 
-// Regroupe les artistes par date
 export function groupConcertsByDay(artists) {
   return artists.reduce((acc, artist) => {
-    // Si la date n'existe pas encore dans 'acc' on l'initialise avec un tableau vide
+    // If the date doesn't exist yet in "acc", initialize it with an empty array
     if (!acc[artist.date]) acc[artist.date] = [];
 
-    // Ajoute l'artiste dans la liste correspondant à sa date
+    // Add the artist to the corresponding date array
     acc[artist.date].push(artist);
-    return acc; // 'acc' est un objet qui stocke les artistes regroupés par date
+    return acc;
   }, {});
 }
 
-// dans groupConcertsByDay: 'acc' est l'accumulateur de .reduce(), il stocke les résultats au fur et à mesure et devient l'objet final contenant les concerts triée par jour
+// Here, "acc" is the accumulator of .reduce(), it stores the result progresively and becomes the final object

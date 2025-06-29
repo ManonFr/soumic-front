@@ -6,7 +6,7 @@ export async function fetchAllArtists() {
   return await res.json();
 }
 
-// Récupère les artistes pour une scène donnée
+// Fetch artists for a specific stage by filtering from all artists
 export async function fetchArtistsByStage(stageId) {
   const artists = await fetchAllArtists();
 
@@ -15,24 +15,8 @@ export async function fetchArtistsByStage(stageId) {
   );
 }
 
-// Récupère les artistes et les scènes
-export async function fetchFestivalData() {
-  const artists = await fetchAllArtists();
-
-  // Liste des scènes à partir des artistes
-  const stagesMap = new Map();
-  for (const artist of artists) {
-    if (!stagesMap.has(artist.stage_name)) {
-      stagesMap.set(artist.stage_name, {
-        id: artist.stage_name,
-        name: artist.stage_name,
-      });
-    }
-  }
-
-  const stages = Array.from(stagesMap.values());
-
-  const adaptedArtists = artists.map((a) => ({
+function adaptArtist(a) {
+  return {
     id: a.artist_id,
     name: a.artist_name,
     photo: a.photo,
@@ -41,7 +25,28 @@ export async function fetchFestivalData() {
     startTime: a.start_time,
     endTime: a.end_time,
     stage: a.stage_name,
-  }));
+  };
+}
+
+// Fetch all artists and derive stages from them
+export async function fetchFestivalData() {
+  const artists = await fetchAllArtists();
+
+  // Build a list of unique stages based on artist data
+  const stagesMap = new Map();
+  artists.forEach((artist) => {
+    if (!stagesMap.has(artist.stage_name)) {
+      stagesMap.set(artist.stage_name, {
+        id: artist.stage_name,
+        name: artist.stage_name,
+      });
+    }
+  });
+
+  const stages = Array.from(stagesMap.values());
+
+  // Format artist objects for frontend display
+  const adaptedArtists = artists.map(adaptArtist);
 
   return { artists: adaptedArtists, stages };
 }

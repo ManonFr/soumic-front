@@ -20,14 +20,13 @@ export default function TimelinePlanning({ artists, stages }) {
   const uniqueDays = getUniqueDays(artists);
   const uniqueGenres = getUniqueGenres(artists);
 
-  // Filtrage des  artistes selon les filtres sélectionnés
-  // useMemo optimise le calcul pour éviter de recalculer inutilement à chaque rendu
+  // Filter artists based on selected filters
   const filteredArtists = useMemo(
     () => filterArtists(artists, filters),
     [artists, filters]
   );
 
-  // Regroupe les concerts par jour après filtrage des artistes
+  // Group concerts by day after filtering
   const concertsByDay = useMemo(
     () => groupConcertsByDay(filteredArtists),
     [filteredArtists]
@@ -47,7 +46,7 @@ export default function TimelinePlanning({ artists, stages }) {
         }
       />
       <div className={styles.timelineContainer} aria-live="polite">
-        {/* Boucle sur chaque jour où des concerts sont prévus */}
+        {/* Loop through each concert day */}
         {Object.entries(concertsByDay).map(([date, concerts]) => {
           const MIN_START_HOUR = 15;
           const MAX_END_HOUR = 24;
@@ -70,14 +69,14 @@ export default function TimelinePlanning({ artists, stages }) {
               </div>
 
               <div className={styles.timeline}>
-                {/* Boucle sur les scènes pour afficher les concerts correspondants */}
+                {/* Loop through each stage to display its concerts */}
                 {stages.map((stage) => (
                   <div key={stage.id} className={styles.stageBlock}>
                     <h3 className={styles.stageTitle}>{stage.name}</h3>
                     <StageRow
                       key={stage.id}
                       stage={stage}
-                      concerts={concerts.filter((c) => c.stage === stage.id)} // Filtrage des concerts de cette scène
+                      concerts={concerts.filter((c) => c.stage === stage.id)} // Filter concerts for a given stage
                       earliestStartTime={earliestStartTime}
                       latestEndTime={latestEndTime}
                     />

@@ -5,8 +5,8 @@ import "leaflet/dist/leaflet.css";
 import MarkerList from "../MarkerList/MarkerList";
 import styles from "./Map.module.css";
 
-// Chargement dynamique des composants React-Leaflet
-// Next.js ne supporte pas Leaflet côté serveur, donc on le désactive avec ssr:false
+// Dynamic import of React-Leaflet components
+// Leaflet doesn't work with server-side rendering in Next.js, so we disable SSR
 const MapContainer = dynamic(
   () => import("react-leaflet").then((mod) => mod.MapContainer),
   { ssr: false }
@@ -19,10 +19,10 @@ const TileLayer = dynamic(
 export default function Map({ markers }) {
   return (
     <MapContainer
-      center={[48.757639, 2.243271]} // Latitude et longitude pour centrer la carte
+      center={[48.757639, 2.243271]}
       zoom={16}
       style={{ height: "600px", width: "100%" }}
-      scrollWheelZoom={false} // Désactiver le zoom à la molette
+      scrollWheelZoom={false} // Disable zoom with mouse wheel
       attributionControl={false}
       className={styles.map}
     >

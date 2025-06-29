@@ -1,29 +1,40 @@
+import styles from "./tickets.module.css";
 import Link from "next/link";
 
 export default function Ticket() {
   return (
     <>
-      <Link href="/tickets/VIP" aria-label="Acheter un billet pour Soumic 2025">
-        <button>Acheter un billet VIP</button>
-      </Link>
-      <Link
-        href="/tickets/premium"
-        aria-label="Acheter un billet pour Soumic 2025"
-      >
-        <button>Acheter un billet Premium</button>
-      </Link>
-      <Link
-        href="/tickets/backstage"
-        aria-label="Acheter un billet pour Soumic 2025"
-      >
-        <button>Acheter un billet Backstage</button>
-      </Link>
-      <Link
-        href="/tickets/standard"
-        aria-label="Acheter un billet pour Soumic 2025"
-      >
-        <button>Acheter un billet Standard</button>
-      </Link>
+      <h1>Tickets</h1>
+      <div className={styles.container}>
+        <Link
+          href="/tickets/vip"
+          aria-label="Acheter un billet pour Soumic 2025"
+          className={styles.button}
+        >
+          Acheter un billet VIP
+        </Link>
+        <Link
+          href="/tickets/premium"
+          aria-label="Acheter un billet pour Soumic 2025"
+          className={styles.button}
+        >
+          Acheter un billet Premium
+        </Link>
+        <Link
+          href="/tickets/backstage"
+          aria-label="Acheter un billet pour Soumic 2025"
+          className={styles.button}
+        >
+          Acheter un billet Backstage
+        </Link>
+        <Link
+          href="/tickets/standard"
+          aria-label="Acheter un billet pour Soumic 2025"
+          className={styles.button}
+        >
+          Acheter un billet Standard
+        </Link>
+      </div>
     </>
   );
 }

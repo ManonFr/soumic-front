@@ -4,19 +4,19 @@ import styles from "./MapFilters.module.css";
 export default function MapFilters({ filter, onFilterChange }) {
   return (
     <div className={styles.filters}>
-      {/* Label associé au 'select' pour l'accessibilité */}
+      {/* Label associated with the <select> for accessibility */}
       <label htmlFor="filter" className={styles.label}>
         Afficher:{" "}
       </label>
       <select
-        id="filter" // Permet de relier le <label> au <select>
-        value={filter} // Valeur sélectionnée correspond à l'état du filtre
+        id="filter" // Links the <label> to its <select>
+        value={filter} // Selected value corresponds to the filter state
         onChange={(e) => {
-          onFilterChange(e); // Met à jour le filtre sélectionné (dans le composant parent InteractiveMap)
-          document.getElementById("map").focus(); // Fait remonter le focus à la carte
+          onFilterChange(e); // Updates selected filter (in the parent InteractiveMap)
+          document.getElementById("map").focus(); // Moves focus back to the map
         }}
         className={styles.select}
-        aria-describedby="filter-info" // Accessibilité: lie le <select> au texte explicatif (le <p>)
+        aria-describedby="filter-info" // Links the <select> to the explanatory text below
       >
         <option value="all">Tout</option>
         <option value="stages">Scènes</option>

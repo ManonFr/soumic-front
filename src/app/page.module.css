@@ -16,7 +16,7 @@
   text-align: center;
 }
 
-.ticketButton button {
+.ticketButton  {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -30,6 +30,8 @@
   cursor: pointer;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   animation: neonPulse 1.8s infinite ease-in-out;
+  text-align: center;
+  text-decoration: none;
 }
 
 @keyframes neonPulse {
@@ -47,7 +49,7 @@
   }    
 }
 
-.ticketButton button:hover {
+.ticketButton:hover {
   transform: scale(1.1);
   box-shadow: 0 0 30px rgba(255, 0, 127, 1);
 }
@@ -99,9 +101,15 @@
 
   }
 
-  .ticketButton button {
+  .ticketButton {
     font-size: 1rem;
     padding: 10px 16px;
+    position: relative;
+    display: inline-block;
+    margin: 2rem auto 0 auto; /* Centrage horizontal */
+    left: auto;
+    right: auto;
+    top: -250px;
   }
 }
 
@@ -110,26 +118,16 @@
     height: calc(100vh - 100px);
   }
 
-  .ticketButton button {
-    bottom: 40px;
-    right: 40px;
-  }
-}
-
-@media screen and (max-width: 1023px) {  
   .ticketButton {
-    position: absolute;
-    top: 10%;  /* Place le bouton au-dessus du h1 */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: max-content;
-  }
-
-  .ticketButton button {
-    bottom: auto;
+    position: relative;
+    display: inline-block;
+    margin: 2rem auto 0 auto;
+    left: auto;
     right: auto;
+    bottom: auto;
+    top: -400px;
+    transform: none;
   }
 }
+
+

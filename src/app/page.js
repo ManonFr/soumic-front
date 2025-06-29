@@ -19,7 +19,7 @@ export default async function Home() {
           className={styles.ticketButton}
           aria-label="Acheter un billet pour Soumic 2025"
         >
-          <button>Acheter un billet</button>
+          Acheter un billet
         </Link>
       </section>
 

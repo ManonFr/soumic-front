@@ -3,15 +3,15 @@
 import { useState, useEffect } from "react";
 
 export default function useLeaflet() {
-  const [L, setL] = useState(null); // Stocke leaflet une fois chargé
+  const [L, setL] = useState(null); // Store Leaflet once loaded
 
   useEffect(() => {
     import("leaflet").then((leaflet) => {
-      setL(leaflet); // Enregistre leaflet une fois importé
+      setL(leaflet); // Save Leaflet after dynamic import
     });
-  }, []); // Exécuté une seule fois après le premier rendu
+  }, []); // Run only once after initial render
 
   return L;
 }
 
-// Pourquoi import("leaflet") et pas import L from "leaflet" ? => L'import normal est éxécuté au built, ce qui cause une erreur Next.js en mode SSR
+// Why use import("leaflet") instead of import L from "leaflet" ? Bc static imports are executed at build time, which causes errors in Next.js SSR mode

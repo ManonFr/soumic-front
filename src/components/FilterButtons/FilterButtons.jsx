@@ -5,18 +5,13 @@ import styles from "./FilterButtons.module.css";
 import Dropdown from "../Dropdown/Dropdown";
 
 export default function FilterButtons({ days, genres, onFilterChange }) {
-  // Etat local pour suivre les filtres sélectionnés
+  // Local state: keeps track of selected filters
   const [selectedFilters, setSelectedFilters] = useState({
     day: "all",
     genre: "all",
   });
 
-  // selectedFilters mis à jour quand les filtres changent
-  // useEffect(() => {
-  //   setSelectedFilters({ day: "all", genre: "all" });
-  // }, []);
-
-  // Mettre à jour les filtres ET les afficher correctement
+  // Update selected filters and notify parent
   const handleFilterChange = (newFilter) => {
     const updatedFilters = { ...selectedFilters, ...newFilter };
     setSelectedFilters(updatedFilters);
@@ -30,7 +25,7 @@ export default function FilterButtons({ days, genres, onFilterChange }) {
 
   return (
     <div className={styles.filterContainer}>
-      {/* Afficher tout par défaut */}
+      {/* Default: show everything */}
       <button
         onClick={handleResetFilters}
         className={`${styles.filterButton} ${
@@ -41,7 +36,7 @@ export default function FilterButtons({ days, genres, onFilterChange }) {
         All
       </button>
 
-      {/* Dropdown jours */}
+      {/* Dropdown for days */}
       <Dropdown
         options={days.map((d) => ({ value: d.raw, label: d.display }))}
         selected={
@@ -51,7 +46,7 @@ export default function FilterButtons({ days, genres, onFilterChange }) {
         label="Jour"
       />
 
-      {/* Dropdown genres */}
+      {/* Dropdown for genres */}
       <Dropdown
         options={genres.map((g) => ({ value: g.raw, label: g.display }))}
         selected={

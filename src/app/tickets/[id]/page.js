@@ -1,4 +1,5 @@
-import styles from "./tickets.module.css";
+import styles from "./ticketsId.module.css";
+import Link from "next/link";
 
 export default async function TicketPage({ params }) {
   const { id } = await params;
@@ -9,6 +10,13 @@ export default async function TicketPage({ params }) {
       <p className={styles.description}>
         Vous avez sélectionné le billet {id} pour Soumic 2025.
       </p>
+      <Link
+        href="/tickets"
+        aria-label="Retour au choix des billets"
+        className={styles.backLink}
+      >
+        Retour
+      </Link>
     </main>
   );
 }

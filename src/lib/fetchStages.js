@@ -6,14 +6,14 @@ export async function fetchAllPOIs() {
   return await res.json();
 }
 
-// Récupère toutes les scènes
+// Only fetch POIs of type "stage"
 export async function fetchStagesOnly() {
   const allPois = await fetchAllPOIs();
 
   return allPois.filter((poi) => poi.type === "stage");
 }
 
-// Récupère une scène spécifique par ID
+// Fetch a specific stage by its ID
 export async function fetchStage(stageId) {
   const allPois = await fetchAllPOIs();
 

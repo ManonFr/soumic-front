@@ -1,13 +1,14 @@
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import { Toaster } from "react-hot-toast";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
-import { Exo_2, Montserrat, Audiowide, Lato } from "next/font/google";
+import { Exo_2, Montserrat, Audiowide } from "next/font/google";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "700"], // Poids des polices nécessaires
-  variable: "--font-montserrat", // Variable CSS pour cette police
+  weight: ["400", "700"],
+  variable: "--font-montserrat",
 });
 
 const exo2 = Exo_2({
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
       className={`${montserrat.variable} ${exo2.variable} ${audiowide.variable}`}
     >
       <body>
+        <Toaster position="top-center" />
         <Header />
         <div className="contentWrapper">
           <main className="mainContent">{children}</main>

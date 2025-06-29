@@ -1,7 +1,7 @@
 import styles from "./Burger.module.css";
 
 export default function Burger({ isOpen, setIsOpen }) {
-  // Toggle menu visibilité
+  // Toggle menu visibility
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (

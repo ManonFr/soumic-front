@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 400px;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+.button {
+    background-color: #8a2be2;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #a64eff;
+    box-shadow: 0 0 10px #c58aff;
+}

@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Soumic 2025 - Festival website
 
-## Getting Started
+A simple web/mobile frontend built with Next.js for managing and showcasing the Soumic 2025 music festival.
 
-First, run the development server:
+## Overview
+
+This project is a web app developed as part of a fullstack training program.
+It displays key festival information such as artists and their concert, stages and amenities on a live map and more.
+
+Built with:
+
+- [Next.js 15](https://nextjs.org/) (App Router)
+- React 19
+- CSS Modules
+- Leaflet & React Leaflet for map rendering
+- Hosted on [Vercel](https://vercel.com/)
+
+## Project structure
+
+- `app/page.js` – Home page
+- `components/` – Reusable UI components (e.g., MiniMap, TicketsLink) and Local CSS modules
+- `lib/` – Utility functions (e.g., `fetchStagesOnly`)
+- `public/` – Static assets
+
+## Getting started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) v18 or higher
+- [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/) or [yarn](https://yarnpkg.com/)
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/your-username/mspr.git
+cd mspr
+
+# Install dependencies
+npm install
+
+# Start the dev server with Turbopack
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This project is deployed on Vercel.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To deploy your own version:
 
-## Learn More
+1. Push the project to Github
+2. Create a Vercel account and import the repository
+3. Vercel will auto-detest the Next.js framework and deploy it
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is for educational purposes and has no specific license.

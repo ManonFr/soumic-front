@@ -9,11 +9,11 @@ export default function ScrollToTop() {
   useEffect(() => {
     const toggleVisibility = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      setIsVisible(scrollTop > 300); // Apparaît si on scroll de plus de 300px
+      setIsVisible(scrollTop > 300); // Appears if scrolled more than 300px
     };
 
-    window.addEventListener("scroll", toggleVisibility); // Ecoute l'évènement de scroll
-    return () => window.removeEventListener("scroll", toggleVisibility); // Nettoyage de l'évènement au démontage du composant
+    window.addEventListener("scroll", toggleVisibility); // Listen to scroll event
+    return () => window.removeEventListener("scroll", toggleVisibility); // Clean up event on component unmount
   }, []);
 
   function handleClick() {

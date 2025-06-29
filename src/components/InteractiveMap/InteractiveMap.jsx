@@ -10,8 +10,7 @@ import { translateType } from "@/utils/translations";
 export default function InteractiveMap({ markers }) {
   const [filter, setFilter] = useState("all");
 
-  // Filtrer les marqueurs en fonction du filtre sélectionné
-  // Seuls les marqueurs correspondant au type sélectionné sont affichés
+  // Filter markers based on the selected type
   const filteredMarkers = markers.filter(
     (marker) => filter === "all" || marker.type === filter
   );
@@ -21,24 +20,23 @@ export default function InteractiveMap({ markers }) {
       <section className={styles.controls}>
         <MapFilters
           filter={filter}
-          onFilterChange={(e) => setFilter(e.target.value)} // Mise à jour du filtre sélectionné
-          // Ici (e) = l'objet 'event', cest l'évènement passé automatiquement par React lorsque l'on déclence onChange sur un select ou input
+          onFilterChange={(e) => setFilter(e.target.value)} // Update the selected filter
+          // (e) is the event object, automatically passer by React on select/input changes
         />
       </section>
       <section
         className={styles.mapContainer}
         id="map"
-        tabIndex={-1} // Empêche la carte d'être focusable au clavier pour éviter les bugs
-        aria-live="polite" // Permet aux lecteurs d'écran d'annoncer les changements sur la carte
+        tabIndex={-1} // Prevents keyboard focus on the map (avoid bugs)
+        aria-live="polite" // Screen readers will announce map updates
       >
         <Map markers={filteredMarkers} />{" "}
-        {/* Carte avec les marqueurs filtrés */}
       </section>
-      {/* Liste des lieux affichés sur la carte */}
+      {/* List of places displayed on the map */}
       <section className={styles.venueListContainer}>
         <h2 className={styles.listTitle}>Lieux affichés sur la carte</h2>
         <ul className={styles.venueList} aria-live="polite">
-          {/* Affichage des lieux correspondants au filtre */}
+          {/* Display places mathing the current filter */}
           {filteredMarkers.length > 0 ? (
             filteredMarkers.map((marker) => (
               <li

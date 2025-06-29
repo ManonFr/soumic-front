@@ -14,3 +14,15 @@
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
 }
+
+.backLink {
+    display: inline-block;
+    margin-top: 20px;
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}

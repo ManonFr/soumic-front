@@ -7,10 +7,10 @@ import styles from "./MiniMap.module.css";
 import useLeaflet from "@/utils/useLeaflet";
 import { getCustomIcon } from "@/utils/iconsUtils";
 
-// Pour contrer l'erreur 500 - Chargement dynamique des composants Leaflet
+// Fix error 500: dynamically load leaflet components
 const MapContainer = dynamic(
   () => import("react-leaflet").then((mod) => mod.MapContainer),
-  { ssr: false } // Next.js ne supporte pas Leaflet en SSR
+  { ssr: false }
 );
 const TileLayer = dynamic(
   () => import("react-leaflet").then((mod) => mod.TileLayer),
@@ -25,7 +25,7 @@ const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), {
 });
 
 export default function MiniMap({ markers }) {
-  const L = useLeaflet(); // Charger Leaflet uniquement côté client
+  const L = useLeaflet(); // Load Leaflet only client side
 
   if (!L) return <p>Chargement de la carte...</p>;
 
@@ -44,12 +44,12 @@ export default function MiniMap({ markers }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
 
-        {/* Ajouter uniquement les marqueurs des scènes */}
+        {/* Only add markers for stages */}
         {markers.map((marker) => (
           <Marker
             key={marker.id}
             position={[marker.latitude, marker.longitude]}
-            icon={getCustomIcon(L, "stages")} // Icône personnalisée
+            icon={getCustomIcon(L, "stages")} // Custom icon for stages
             title={`Scène ${marker.name}`}
             aria-label={`Scène ${marker.name}, cliquez pour voir les artistes`}
           >

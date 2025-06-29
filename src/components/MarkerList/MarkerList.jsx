@@ -6,8 +6,7 @@ import useLeaflet from "@/utils/useLeaflet";
 import dynamic from "next/dynamic";
 import styles from "./MarkerList.module.css";
 
-// Chargement dynamique des composants React-Leaflet
-// Next.js ne supporte pas Leaflet côté serveur, donc on le désactive avec ssr:false
+// Dynamically load React-Leaflet components
 const Marker = dynamic(
   () => import("react-leaflet").then((mod) => mod.Marker),
   { ssr: false }
@@ -17,29 +16,29 @@ const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), {
 });
 
 export default function MarkerList({ markers }) {
-  const L = useLeaflet(); // Vérifie si Leaflet est bien chargé côté client
+  const L = useLeaflet(); // Check if Leaflet is available client-side
 
-  // Si Leaflet n'est pas encore dispo, on ne retourne rien (évite les erreurs)
+  // Avoids runtime errors
   if (!L) return null;
 
   return (
     <>
-      {/* Parcours la liste des marqueurs et les affiche sur la carte */}
+      {/* Loop through markers and display them on the map */}
       {markers.map((marker) => (
         <Marker
-          key={`${marker.type}-${marker.id}`} // Clé unique: type + id
+          key={`${marker.type}-${marker.id}`} // Unique key: type + id
           position={[marker.latitude, marker.longitude]}
           icon={getCustomIcon(L, marker.type)}
           className={styles.customMarkerIcon}
         >
           <Popup aria-live="assertive">
-            {/* Si le marqueur est une scène, on affiche un lien vers les artistes qui s'y produisent */}
-            {marker.type === "stages" && ( // permet d'afficher seulement les infor pertinentes pour chaque type de lieu
+            {/* If the marker is a stage, show a link to the related artists */}
+            {marker.type === "stages" && (
               <div className={styles.popupContent}>
                 <strong>{marker.name}</strong>
                 <br />
                 <Link
-                  href={`/scenes/${marker.id}`} // Lien vers la page de la scène
+                  href={`/scenes/${marker.id}`} // Link to the stage page
                   className={styles.popupLink}
                 >
                   Voir les artistes
