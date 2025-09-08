@@ -9,8 +9,6 @@ export default function AdminButton() {
     setLoading(true);
 
     try {
-      console.log("API URL =", process.env.NEXT_PUBLIC_API_URL);
-
       // 1. Ping towards backend
       await fetch(`${process.env.NEXT_PUBLIC_API_URL}/ping`);
     } catch {}
