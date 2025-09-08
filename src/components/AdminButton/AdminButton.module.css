@@ -1,0 +1,28 @@
+.adminButton {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 8px 16px;
+    margin-top: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.adminButton:hover:not(:disabled) {
+    background-color: #333;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+}
+
+.adminButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+    background-color: #1a1a1a;
+}

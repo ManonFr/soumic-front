@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.css";
+import AdminButton from "../AdminButton/AdminButton";
 
 export default function Footer() {
   return (
@@ -54,14 +55,7 @@ export default function Footer() {
               height={30}
             ></Image>
           </div>
-          <Link
-            href="https://soumic-backoffice.vercel.app/"
-            className={styles.adminButton}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Accès administration
-          </Link>
+          <AdminButton />
         </div>
       </div>
       <div className={styles.separator}></div>
