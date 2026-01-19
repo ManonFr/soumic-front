@@ -1,5 +1,5 @@
 export async function fetchAllPOIs() {
-  const res = await fetch(`https://soumic-backend.onrender.com/poi`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/poi`, {
     next: { revalidate: 3600 },
   });
 

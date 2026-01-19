@@ -1,5 +1,5 @@
 export async function fetchAllArtists() {
-  const res = await fetch(`https://soumic-backend.onrender.com/artists`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/artists`, {
     next: { revalidate: 3600 },
   });
 

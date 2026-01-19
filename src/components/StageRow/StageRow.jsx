@@ -33,7 +33,7 @@ export default function StageRow({
                 tabIndex="0" // Allows keyboard navigation via Tab
                 aria-label={`Concert de ${concert.name} sur la scène ${stage.name} de ${concert.startTime} à ${concert.endTime}`}
               >
-                {concert.name}
+                <span className={styles.eventText}>{concert.name}</span>
               </div>
             );
           })
