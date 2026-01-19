@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "leaflet": "^1.9.4",
-    "next": "^15.1.6",
+    "next": "15.5.9",
     "phosphor-react": "^1.4.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
