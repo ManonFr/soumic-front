@@ -33,8 +33,8 @@ Built with:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/mspr.git
-cd mspr
+git clone https://github.com/ManonFr/soumic-front.git
+cd soumic-front
 
 # Install dependencies
 npm install

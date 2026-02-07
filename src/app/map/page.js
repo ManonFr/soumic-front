@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import InteractiveMap from "@/components/InteractiveMap/InteractiveMap";
 import { fetchPoiData } from "@/lib/fetchPoiData";
 
