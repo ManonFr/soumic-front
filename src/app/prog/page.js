@@ -1,5 +1,3 @@
-export const dynamic = "force-dynamic";
-
 import TimelinePlanning from "@/components/TimelinePlanning/TimelinePlanning";
 import { fetchFestivalData } from "@/lib/fetchArtists";
 
