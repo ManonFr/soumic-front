@@ -9,7 +9,7 @@ import styles from "./MarkerList.module.css";
 // Dynamically load React-Leaflet components
 const Marker = dynamic(
   () => import("react-leaflet").then((mod) => mod.Marker),
-  { ssr: false }
+  { ssr: false },
 );
 const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), {
   ssr: false,

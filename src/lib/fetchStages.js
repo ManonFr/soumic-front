@@ -1,23 +1,17 @@
-export async function fetchAllPOIs() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/poi`, {
+export async function fetchStagesData() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/stages`, {
     next: { revalidate: 3600 },
   });
 
-  return await res.json();
-}
+  const rawStages = await res.json();
+  const adaptedStages = rawStages.map((stage) => ({
+    id: `stage-${stage.id}`,
+    latitude: stage.latitude,
+    longitude: stage.longitude,
+    name: stage.name,
+    description: null,
+    type: "stages",
+  }));
 
-// Only fetch POIs of type "stage"
-export async function fetchStagesOnly() {
-  const allPois = await fetchAllPOIs();
-
-  return allPois.filter((poi) => poi.type === "stage");
-}
-
-// Fetch a specific stage by its ID
-export async function fetchStage(stageId) {
-  const allPois = await fetchAllPOIs();
-
-  return allPois.find(
-    (poi) => poi.type === "stage" && poi.id === Number(stageId)
-  );
+  return adaptedStages;
 }

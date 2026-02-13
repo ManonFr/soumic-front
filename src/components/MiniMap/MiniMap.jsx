@@ -10,15 +10,15 @@ import { getCustomIcon } from "@/utils/iconsUtils";
 // Fix error 500: dynamically load leaflet components
 const MapContainer = dynamic(
   () => import("react-leaflet").then((mod) => mod.MapContainer),
-  { ssr: false }
+  { ssr: false },
 );
 const TileLayer = dynamic(
   () => import("react-leaflet").then((mod) => mod.TileLayer),
-  { ssr: false }
+  { ssr: false },
 );
 const Marker = dynamic(
   () => import("react-leaflet").then((mod) => mod.Marker),
-  { ssr: false }
+  { ssr: false },
 );
 const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), {
   ssr: false,
@@ -44,12 +44,11 @@ export default function MiniMap({ markers }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
 
-        {/* Only add markers for stages */}
         {markers.map((marker) => (
           <Marker
             key={marker.id}
             position={[marker.latitude, marker.longitude]}
-            icon={getCustomIcon(L, "stages")} // Custom icon for stages
+            icon={getCustomIcon(L, marker.type)} // Custom icon for stages
             title={`Scène ${marker.name}`}
             aria-label={`Scène ${marker.name}, cliquez pour voir les artistes`}
           >

@@ -2,10 +2,10 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import TicketsLink from "@/components/TicketsLink/TicketsLink";
 import MiniMap from "@/components/MiniMap/MiniMap";
-import { fetchStagesOnly } from "@/lib/fetchStages";
+import { fetchStagesData } from "@/lib/fetchStages";
 
 export default async function Home() {
-  const stages = await fetchStagesOnly();
+  const stages = await fetchStagesData();
 
   return (
     <main>

@@ -12,8 +12,7 @@ export async function fetchPoiData() {
     longitude: poi.longitude,
     name: poi.name,
     description: poi.description,
-    // Normalizes the type: "stage" becomes "stages" for consistency
-    type: poi.type === "stage" ? "stages" : poi.type,
+    type: poi.type,
   }));
 
   return adaptedMarkers;
