@@ -5,7 +5,7 @@ export async function fetchStagesData() {
 
   const rawStages = await res.json();
   const adaptedStages = rawStages.map((stage) => ({
-    id: `stage-${stage.id}`,
+    id: stage.id,
     latitude: stage.latitude,
     longitude: stage.longitude,
     name: stage.name,
