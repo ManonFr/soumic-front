@@ -16,7 +16,11 @@ export default function Footer() {
             className={styles.logo}
           ></Image>
         </Link>
-        <div className={styles.iconsAndButton}>
+        <div className={styles.iconsAndButtons}>
+          <nav className={styles.footerNav} aria-label="Liens utiles">
+            <Link href="/infos">Informations & FAQ</Link>
+            <Link href="/partenaires">Partenaires</Link>
+          </nav>
           <div className={styles.icons}>
             <Image
               src="/icon-facebook.png"
@@ -59,6 +63,7 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.separator}></div>
+      <div className={styles.adminSection}></div>
     </footer>
   );
 }

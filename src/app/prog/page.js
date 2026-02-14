@@ -1,6 +1,10 @@
 import TimelinePlanning from "@/components/TimelinePlanning/TimelinePlanning";
 import { fetchFestivalData } from "@/lib/fetchArtists";
 
+export const metadata = {
+  title: "Programmation",
+};
+
 export default async function Programme() {
   const { artists, stages } = await fetchFestivalData();
   return (

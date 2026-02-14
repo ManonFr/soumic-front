@@ -2,6 +2,10 @@ import StageDetails from "@/components/StageDetails/StageDetails";
 import { fetchStagesData } from "@/lib/fetchStages";
 import { fetchArtistsByStage } from "@/lib/fetchArtists";
 
+export const metadata = {
+  title: "Artistes programmés",
+};
+
 export default async function StagePage({ params }) {
   const { id } = await params;
 

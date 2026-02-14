@@ -4,6 +4,10 @@ import TicketsLink from "@/components/TicketsLink/TicketsLink";
 import MiniMap from "@/components/MiniMap/MiniMap";
 import { fetchStagesData } from "@/lib/fetchStages";
 
+export const metadata = {
+  title: "Accueil",
+};
+
 export default async function Home() {
   const stages = await fetchStagesData();
 

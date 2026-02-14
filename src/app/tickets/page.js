@@ -1,6 +1,10 @@
 import styles from "./tickets.module.css";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Billetterie",
+};
+
 export default function Ticket() {
   return (
     <>

@@ -24,8 +24,11 @@ const audiowide = Audiowide({
 });
 
 export const metadata = {
-  title: "SOUMIC Festival",
-  description: "Première édition !",
+  title: {
+    default: "SOUMIC Festival",
+    template: "%s | SOUMIC Festival",
+  },
+  description: "Première édition du SOUMIC Festival.",
 };
 
 export default function RootLayout({ children }) {
