@@ -19,7 +19,7 @@ export default function Footer() {
         <div className={styles.iconsAndButtons}>
           <nav className={styles.footerNav} aria-label="Liens utiles">
             <Link href="/infos">Informations & FAQ</Link>
-            <Link href="/partenaires">Partenaires</Link>
+            <Link href="/partners">Partenaires</Link>
           </nav>
           <div className={styles.icons}>
             <Image
@@ -63,7 +63,6 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.separator}></div>
-      <div className={styles.adminSection}></div>
     </footer>
   );
 }
